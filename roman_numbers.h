@@ -4,6 +4,7 @@
 #include <iostream>
 #include <regex>
 
+int validate_input(std::string user_input, int size_limit);
 
 std::string get_roman_number(int size_limit);
 
