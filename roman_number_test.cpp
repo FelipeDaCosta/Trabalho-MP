@@ -21,6 +21,18 @@ TEST(roman_numbers_test, input)
 	EXPECT_EQ(-2,	validate_input("IVXIIVXICVXICVICXIVIVVIXC", 10));
 }
 
+TEST(roman_numbers_test, convert)
+{
+	EXPECT_EQ(1, 	get_arabic_number("I"));
+	EXPECT_EQ(4, 	get_arabic_number("IV"));
+	EXPECT_EQ(80, 	get_arabic_number("LXXX"));
+	EXPECT_EQ(239, 	get_arabic_number("CCXXXIX"));
+	EXPECT_EQ(673, 	get_arabic_number("DCLXXIII"));
+	EXPECT_EQ(1004, get_arabic_number("MIV"));
+	EXPECT_EQ(1420, get_arabic_number("MCDXX"));
+	EXPECT_EQ(2999, get_arabic_number("MMCMXCIX"));
+}
+
 int main(int argc, char ** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
